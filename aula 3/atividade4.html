@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>atividade  4</title>
+</head>
+<body>
+    <form>
+        <label>coloque sua primeira nota para medir sua média</label>
+        <input type="number" id="nota1"/><br>
+        <label>coloque sua primeira segunda nota aqui</label>
+        <input type="number" id="nota2"><br>
+        <button  type="button" onclick="calcular()">Somar</button>
+    </form>
+
+    <p id="resultado"></p>
+
+</body>
+
+<script>
+    function calcular(){
+        let nota1 =Number(document.getElementById("nota1").value)
+        let nota2 =Number(document.getElementById("nota2").value)
+
+        let media = ((nota1 + nota2)/2 )
+
+        if (media >= 7){
+            document.getElementById("resultado").innerHTML = "sua nota foi aprovada"
+        } else if(media >= 5){
+            document.getElementById("resultado").innerHTML = "sua nota é insuficiente:recuperação"
+            
+        }
+        else{
+            document.getElementById("resultado").innerHTML = "sua nota nao foi suficiente.Reprovado."
+
+        }
+        
+    }
+</script>
+</html>
