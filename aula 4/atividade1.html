@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>'calculadora de frete'</title>
+</head>
+<body>
+    <label> coloque a distancia em kilometros(KM) para calcular o frete</label>
+    <P>se a distancia for < do que 100 ou igual, será R$1,50 por km. <br> 
+        Porem se se a distancia for > do que 100 km, será R$1,20 por km.
+    </P>
+    <input type="number" id="distancia"><br>
+
+    <button onclick="calcular()">Calcular</button> 
+    <p id="resultado"></p>
+    
+</body>
+<script>
+    function calcular(){
+        let distancia = Number(document.getElementById("distancia").value)
+
+
+        if (distancia <= 100){
+            let resultado =  (distancia *  1.50)
+            document.getElementById("resultado").innerHTML = resultado
+            // "frete utilizado: R$1,50 = = = seu valor é" ,(
+            
+        }
+        else if (distancia > 100){
+            let resultado =  (distancia *  1.20)
+            document.getElementById("resultado").innerHTML = resultado
+            // ("frete utilizado: R$1,20 = = = seu valor é",
+
+        }
+        
+    }
+// numero ficou quebrado com  distacia > 100!!
+</script>
+</html>

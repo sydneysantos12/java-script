@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>'calculadora de frete'</title>
+</head>
+<body>
+    <label> coloque o preço de gasolina e alcool nas caixas de textos</label><br><br>
+    <input type="number" id="gasolina"/> <label>gasolina</label><br><br>
+    <input type="number" id="alcool"/> <label>alcool</label><br>
+
+    <button onclick="calcular()">Calcular</button> 
+    <p id="resultado" style="font-family: 'Courier New', Courier, monospace; font-size: 60px;"></p>
+    <p id="resultado1"></p>
+    
+</body>
+<script>
+    function calcular(){
+        let gasolina = Number(document.getElementById("gasolina").value)
+        let alcool = Number(document.getElementById("alcool").value)
+        
+        let resultado = ((alcool * 70)/100)
+
+        if (resultado < gasolina){
+            document.getElementById("resultado").innerHTML = "compensa usar alcool"
+            document.getElementById("resultado1").innerHTML = resultado                 
+            
+        }
+        else if (resultado > gasolina){
+            document.getElementById("resultado").innerHTML = "Nao compensa usar alcool"                 
+            document.getElementById("resultado1").innerHTML = resultado                 
+        }
+        else if(resultado == gasolina){
+            document.getElementById("resultado").innerHTML = "mesma merda"
+        }
+    }
+
+</script>
+</html>
