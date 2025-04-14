@@ -1,0 +1,35 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+header{
+    background-color: blue;
+    padding: 5em;
+    text-align: center;
+    color: white;
+}
+footer{
+    background-color: blue;
+    padding: 5em;
+    text-align: center;
+    color: white;
+}
+
+main{
+    text-align: center;
+    margin-top: 3em;
+    margin-bottom: 5em;
+}
+
+#btnmulher{
+    background-color: rgb(139, 27, 169);
+    text-align: center;
+    padding:1.5em;
+    border-radius: 9px;
+}
+#btnhomem{
+    background-color: blue;
+    text-align: center;
+    padding:1.5em;
+    border-radius: 9px;
+}
